@@ -29,12 +29,24 @@ COPY . /var/www/html
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Optimize Laravel
+# Create necessary directories and SQLite file if missing
+RUN mkdir -p /var/www/html/storage/framework/sessions \
+             /var/www/html/storage/framework/views \
+             /var/www/html/storage/framework/cache \
+             /var/www/html/bootstrap/cache \
+             /var/www/html/database && \
+    touch /var/www/html/database/database.sqlite
+
+# Run migrations & seed database if empty
+RUN php artisan migrate --force && \
+    php artisan db:seed --force || true
+
+# Optimize Laravel routes & views
 RUN php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache
 
-# Set permissions
+# Set permissions safely
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database && \
     chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database && \
     chmod 666 /var/www/html/database/database.sqlite
