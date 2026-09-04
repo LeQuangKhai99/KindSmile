@@ -1,0 +1,556 @@
+/* ==========================================================================
+   NHA KHOA KIND SMILE (340 PHỐ HUẾ) - STITCH LUXURY UI DESIGN SYSTEM
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --kindsmile-orange: #F9571B;
+  --kindsmile-orange-hover: #E0480F;
+  --kindsmile-orange-light: #FFF0E8;
+  --kindsmile-dark: #0F172A;
+  --kindsmile-navy: #1E293B;
+  --kindsmile-bg-light: #F8FAFC;
+  --kindsmile-border: #E2E8F0;
+  --kindsmile-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --kindsmile-shadow-md: 0 12px 28px -6px rgba(0, 0, 0, 0.08);
+  --kindsmile-shadow-lg: 0 20px 40px -10px rgba(249, 87, 27, 0.25);
+  --kindsmile-radius: 16px;
+  --kindsmile-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #334155;
+  background-color: #F8FAFC;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Color & Text Helpers */
+.text-kindsmile-orange, .text-parkway-teal { color: var(--kindsmile-orange) !important; }
+.text-kindsmile-dark, .text-parkway-navy { color: var(--kindsmile-dark) !important; }
+.bg-kindsmile-orange, .bg-parkway-teal { background-color: var(--kindsmile-orange) !important; }
+.bg-kindsmile-dark, .bg-parkway-navy { background-color: var(--kindsmile-dark) !important; }
+.bg-parkway-light-teal { background-color: #FFF0E8 !important; }
+
+.badge-kindsmile, .badge-parkway {
+  background-color: #FFF0E8 !important;
+  color: #F9571B !important;
+  font-weight: 700 !important;
+  padding: 0.35rem 0.85rem !important;
+  border-radius: 20px !important;
+  font-size: 0.825rem !important;
+  display: inline-block !important;
+  border: 1px solid #FFE2D4 !important;
+}
+
+/* Header Topbar & Navbar */
+.top-bar {
+  background: #0F172A;
+  color: #94A3B8;
+  font-size: 0.875rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.top-bar a {
+  color: #F8FAFC;
+  text-decoration: none !important;
+}
+
+.top-bar a:hover {
+  color: var(--kindsmile-orange);
+}
+
+.navbar-parkway {
+  background-color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+/* NAVBAR BRAND LOGO - STITCH LUXURY MODERN DESIGN (ABSOLUTELY NO UNDERLINE) */
+a.navbar-brand-logo, 
+a.navbar-brand-logo:hover, 
+a.navbar-brand-logo:focus,
+a.navbar-brand-logo:active,
+a.navbar-brand-logo *,
+.brand-text-wrapper,
+.brand-title,
+.brand-slogan {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+}
+
+.brand-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 14px rgba(249, 87, 27, 0.28);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand-logo:hover .brand-logo-img {
+  transform: scale(1.08) rotate(4deg);
+}
+
+.brand-title {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #0F172A !important;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  margin-bottom: 2px;
+  text-decoration: none !important;
+}
+
+.brand-title span {
+  color: var(--kindsmile-orange) !important;
+  background: linear-gradient(135deg, #F9571B 0%, #FF7A45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none !important;
+}
+
+.brand-slogan {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  color: var(--kindsmile-orange) !important;
+  text-transform: uppercase;
+  background-color: #FFF0E8;
+  padding: 2px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none !important;
+  border: 1px solid #FFE2D4;
+}
+
+.nav-link-parkway {
+  font-weight: 700;
+  color: #1E293B !important;
+  padding: 0.55rem 1.1rem !important;
+  transition: var(--kindsmile-transition);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+}
+
+.nav-link-parkway:hover, .nav-link-parkway.active {
+  color: var(--kindsmile-orange) !important;
+  background-color: #FFF0E8;
+}
+
+/* Primary Buttons */
+.btn-kindsmile, .btn-parkway {
+  background: linear-gradient(135deg, #F9571B 0%, #FF7A45 100%);
+  color: #FFFFFF !important;
+  font-weight: 800;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--kindsmile-transition);
+  box-shadow: 0 6px 20px rgba(249, 87, 27, 0.35);
+  text-decoration: none !important;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  white-space: nowrap !important;
+}
+
+.btn-kindsmile:hover, .btn-parkway:hover {
+  background: linear-gradient(135deg, #E0480F 0%, #F9571B 100%);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(249, 87, 27, 0.5);
+}
+
+.btn-kindsmile-outline, .btn-parkway-outline {
+  border: 2px solid var(--kindsmile-orange);
+  color: var(--kindsmile-orange) !important;
+  background: transparent;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--kindsmile-transition);
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+
+.btn-kindsmile-outline:hover, .btn-parkway-outline:hover {
+  background-color: var(--kindsmile-orange);
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 87, 27, 0.3);
+}
+
+/* INNER PAGE BANNER - HIGH CONTRAST WARM CREAM DESIGN */
+.page-header-banner {
+  background-color: #FFF8F5 !important;
+  border-bottom: 1px solid #FFE8DD !important;
+  padding: 3.5rem 0;
+}
+
+.page-header-title {
+  color: #0F172A !important;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.page-header-subtitle {
+  color: #475569 !important;
+  font-weight: 500;
+  font-size: 1.15rem;
+}
+
+/* HERO SECTION */
+.hero-banner-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  border: 2px solid #FFFFFF;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* RESPONSIVE SIDEBAR STICKY - ONLY STICKY ON DESKTOP (>= 992px) */
+@media (min-width: 992px) {
+  .sidebar-sticky {
+    position: sticky !important;
+    top: 100px !important;
+    z-index: 10 !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .sidebar-sticky {
+    position: static !important;
+    margin-top: 2rem !important;
+    z-index: 1 !important;
+  }
+}
+
+/* QUICK BOOKING CARD */
+.quick-booking-card {
+  background: #FFFFFF !important;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E2E8F0;
+  color: #0F172A !important;
+}
+
+.quick-booking-card h3 {
+  color: #0F172A !important;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+.form-control-parkway, .form-select-parkway {
+  border: 1.5px solid #CBD5E1 !important;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+  transition: var(--kindsmile-transition);
+}
+
+.form-control-parkway:focus, .form-select-parkway:focus {
+  border-color: var(--kindsmile-orange) !important;
+  box-shadow: 0 0 0 4px rgba(249, 87, 27, 0.15) !important;
+  outline: none;
+}
+
+/* SERVICE CARDS */
+.service-card {
+  background: #FFFFFF !important;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  padding: 2rem 1.5rem;
+  transition: var(--kindsmile-transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--kindsmile-shadow-sm);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--kindsmile-shadow-lg);
+  border-color: var(--kindsmile-orange);
+}
+
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: #FFF0E8;
+  color: var(--kindsmile-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1.25rem;
+  transition: var(--kindsmile-transition);
+}
+
+.service-card:hover .service-icon-box {
+  background: var(--kindsmile-orange);
+  color: #FFFFFF;
+}
+
+.badge-kindsmile {
+  background-color: #FFF0E8;
+  color: var(--kindsmile-orange);
+  font-weight: 800;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+/* DOCTOR CARDS */
+.doctor-card {
+  background: #FFFFFF !important;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  box-shadow: var(--kindsmile-shadow-sm);
+  transition: var(--kindsmile-transition);
+  height: 100%;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--kindsmile-shadow-lg);
+  border-color: var(--kindsmile-orange);
+}
+
+.doctor-img-wrap {
+  background: linear-gradient(180deg, #FFF0E8 0%, #FFFFFF 100%);
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.doctor-avatar-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #0F172A;
+  color: #FFFFFF;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 8px 20px rgba(249, 87, 27, 0.2);
+}
+
+.doctor-info {
+  padding: 1.5rem;
+}
+
+/* PRICE TABLE */
+.price-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #E2E8F0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--kindsmile-shadow-sm);
+}
+
+.price-table th {
+  background-color: #0F172A;
+  color: #FFFFFF;
+  font-weight: 800;
+  padding: 1rem 1.25rem;
+  text-align: left;
+}
+
+.price-table td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+}
+
+.price-table tr:hover td {
+  background-color: #FFF8F5;
+}
+
+/* FLOATING WIDGET */
+.floating-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF !important;
+  font-size: 1.35rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: var(--kindsmile-transition);
+  text-decoration: none !important;
+}
+
+.floating-btn-phone { background-color: #EF4444; }
+.floating-btn-zalo { background-color: #0068FF; }
+.floating-btn-book { background-color: var(--kindsmile-orange); }
+
+.floating-btn:hover {
+  transform: scale(1.12);
+}
+
+/* FOOTER STYLING - HIGH CONTRAST DARK SLATE BACKGROUND */
+.footer-parkway {
+  background-color: #0F172A !important;
+  color: #94A3B8 !important;
+  padding-top: 4rem;
+  padding-bottom: 2.5rem;
+  margin-top: 3rem;
+  border-top: 4px solid var(--kindsmile-orange);
+}
+
+.footer-parkway h5 {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.footer-parkway ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-parkway ul li {
+  margin-bottom: 0.75rem;
+  color: #CBD5E1 !important;
+}
+
+.footer-parkway a {
+  color: #CBD5E1 !important;
+  text-decoration: none !important;
+  transition: var(--kindsmile-transition);
+}
+
+.footer-parkway a:hover {
+  color: var(--kindsmile-orange) !important;
+  padding-left: 4px;
+}
+
+.footer-working-box {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.footer-working-box p {
+  color: #FFFFFF !important;
+}
+
+/* ADMIN PANEL */
+.admin-sidebar {
+  width: 260px;
+  background-color: #0F172A;
+  color: #94A3B8;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.admin-content {
+  margin-left: 260px;
+  padding: 2rem;
+  background-color: #F8FAFC;
+  min-height: 100vh;
+}
+
+.admin-nav-link {
+  color: #94A3B8;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-left: 4px solid transparent;
+  transition: var(--kindsmile-transition);
+}
+
+.admin-nav-link:hover, .admin-nav-link.active {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-left-color: var(--kindsmile-orange);
+}
+
+/* CKEDITOR RICH TEXT EDITOR STYLING */
+.ck-editor__editable_inline {
+  min-height: 280px !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  font-size: 1rem !important;
+  color: #0F172A !important;
+}
+
+.ck-toolbar {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+}
+
+.ck-focused {
+  border-color: var(--kindsmile-orange) !important;
+  box-shadow: 0 0 0 4px rgba(249, 87, 27, 0.15) !important;
+}
+
+.stat-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

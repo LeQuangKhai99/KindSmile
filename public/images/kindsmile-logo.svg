@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B2C" />
+      <stop offset="100%" stop-color="#E0480F" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background Circle with Padding -->
+  <circle cx="250" cy="250" r="235" fill="url(#logoGrad)" />
+  
+  <!-- Tooth with Heart Inner Path (Shifted UP) -->
+  <g fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" filter="url(#dropShadow)">
+    <!-- Tooth outer outline -->
+    <path d="M 165 130 C 165 85, 212 75, 250 102 C 288 75, 335 85, 335 130 C 335 185, 305 220, 287 255 C 273 280, 260 290, 250 272 C 240 290, 227 280, 213 255 C 195 220, 165 185, 165 130 Z" stroke-width="16"/>
+    <!-- Heart inside tooth -->
+    <path d="M 213 142 C 213 120, 235 115, 250 133 C 265 115, 287 120, 287 142 C 287 168, 250 200, 250 200 C 250 200, 213 168, 213 142 Z" stroke-width="12" fill="none"/>
+  </g>
+
+  <!-- Text elements (Shifted UP into clear view) -->
+  <text x="250" y="325" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="28" letter-spacing="3">NHA KHOA</text>
+  <text x="250" y="372" text-anchor="middle" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-weight="900" font-size="40" letter-spacing="1.5">KIND SMILE</text>
+  <text x="250" y="408" text-anchor="middle" fill="#FFE2D4" font-family="'Inter', system-ui, sans-serif" font-weight="700" font-size="16" letter-spacing="2">TẬN TÂM NHƯ GIA ĐÌNH</text>
+</svg>
