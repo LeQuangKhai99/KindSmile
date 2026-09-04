@@ -15,3 +15,5 @@ services:
         value: sqlite
       - key: DB_DATABASE
         value: /var/www/html/database/database.sqlite
+      - key: APP_URL
+        value: https://kindsmile.onrender.com
